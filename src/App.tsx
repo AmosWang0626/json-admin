@@ -1,9 +1,12 @@
-import { RouterProvider } from 'react-router-dom';
-import router from './router/index.tsx';
-import './App.css';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-function App() {
-  return <RouterProvider router={router} />;
+import {privateRoutes} from './routes/browserRouter';
+
+const App = () => {
+
+  return (
+      <RouterProvider router={ createBrowserRouter(privateRoutes) } />
+  )
 }
 
 export default App;
